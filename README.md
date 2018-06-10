@@ -1,7 +1,9 @@
 # BSQ Project Firt Semester
 
-Note 20.
+Note 20
+
+Grade : A
 
 In time for 10k x 10k
 
-Grade CPE : A
+USAGE : ./bsq map (to create).
