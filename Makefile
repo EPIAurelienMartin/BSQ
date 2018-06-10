@@ -13,7 +13,9 @@ RM	= rm -f
 
 SRCS	=	./src/main.c 		\
 		./src/open_my_file.c	\
-		./src/fill_struct.c
+		./src/fill_struct.c	\
+		./src/my_number_tab.c	\
+		./src/particular_size.c
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -35,6 +37,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 	make fclean -C ./lib/my/
+	rm -rf lib/libmy.a
 
 re: fclean all
 

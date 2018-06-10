@@ -50,7 +50,7 @@ int     check_size_cp(int *i, va_list arg, const char *format)
 
 int     my_for_space(int space, int *i, const char *format)
 {
-	for (*i = *i; format[*i] == ' ' ; *i += 1) {
+	for (*i = *i; format[*i] == ' '; *i += 1) {
 		my_putchar(' ');
 		space -= 1;
 	}

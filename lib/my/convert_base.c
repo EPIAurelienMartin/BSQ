@@ -25,8 +25,8 @@ int	decimal_base(int nb, int base)
 	int   i = 0;
 	int   j = 0;
 	char  *res;
-	char  number[10] = {'0', '1', '2', \
-			    '3', '4', '5', '6', '7', '8', '9'};
+	char  number[10] = {'0', '1', '2', '3', '4',
+				'5', '6', '7', '8', '9'};
 
 	res = malloc(sizeof(char) * 64);
 	while (nb != 0) {
@@ -35,7 +35,7 @@ int	decimal_base(int nb, int base)
 		i++;
 	}
 	i--;
-	for (j = 0; i >= 0 ; j++ ) {
+	for (j = 0; i >= 0; j++ ) {
 		res[j] = number[resultat[i]];
 		i--;
 	}

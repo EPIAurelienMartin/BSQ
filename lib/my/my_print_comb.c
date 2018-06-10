@@ -24,7 +24,7 @@ void	display(int a, int b , int c)
 	}
 }
 
-int	my_print_comb(void)
+void	my_print_comb(void)
 {
 	int	a = '0';
 	int	b = '1';
@@ -46,5 +46,4 @@ int	my_print_comb(void)
 			display(a, b, c);
 		}
 	}
-	return (0);
 }

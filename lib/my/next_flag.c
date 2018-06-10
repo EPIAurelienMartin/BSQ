@@ -25,7 +25,7 @@ int     my_foward(char car)
 	int     i = 0;
 	char    *foward = " 0123456789-+";
 
-	for (i = 0; foward[i] && foward[i] != car ; i++);
+	for (i = 0; foward[i] && foward[i] != car; i++);
 	if (i == 13)
 		return (-1);
 	else
@@ -36,7 +36,7 @@ int     next_flag(int *i, char const *format)
 {
 	int     cpt = *i;
 
-	for (cpt = cpt ; my_foward(format[cpt]) == 0 && format[cpt] ; cpt++);
+	for (cpt = cpt; my_foward(format[cpt]) == 0 && format[cpt]; cpt++);
 	if (is_flag(format[cpt]) == 0)
 		return (0);
 	else

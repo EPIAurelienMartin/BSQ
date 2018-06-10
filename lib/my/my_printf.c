@@ -45,7 +45,7 @@ int	my_other(int *i, va_list arg, int (**print)(), const char *format)
 
 	if (format[*i] == '#')
 		res += my_diese(i, arg, print, format);
-	for (j = 0 ; (format[*i] != search[j] && search[j]); j++);
+	for (j = 0; (format[*i] != search[j] && search[j]); j++);
 	if (j == 11) {
 		if (format[*i] == '-' || format[*i] == '+' || \
 			my_char_isnum(format[*i]) == 0)
@@ -66,7 +66,7 @@ int	my_loop(int *i, va_list arg, int (**print)(), const char *form)
 	int	j = 0;
 	char	*hexa = "0123456789abcdef";
 
-	for (j = 0 ; (form[*i] != s[j] && s[j]); j++);
+	for (j = 0; (form[*i] != s[j] && s[j]); j++);
 	if (form[*i] == s[j] || (form[*i] == 'l' && form[*i + 1] == 'x')) {
 		if (form[*i] == 'p')
 			res += send_p(arg, print);
@@ -92,7 +92,7 @@ int	my_printf(const char *format, ...)
 
 	init_ptr(print);
 	va_start(arg, format);
-	for (i = 0 ; (format[i]) ; i++) {
+	for (i = 0; (format[i]); i++) {
 		if (format[i] == '%' && format[i + 1] != '\0') {
 			i++;
 			res += my_loop(&i, arg, print, format);

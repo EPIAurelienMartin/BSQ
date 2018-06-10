@@ -12,6 +12,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <time.h>
 
 int     send_p(va_list arg, int (**print)());
 int     modulol(long unsigned int nbr, char *base);
@@ -38,7 +42,7 @@ int     my_char_isnum(char str);
 void    init_ptr(int (**print)());
 int     my_nb_len(int nb);
 int     my_other(int *i, va_list arg, int (**print)(), const char *format);
-int     my_getnb(char *str);
+int     my_getnb(char const *str);
 int     next_flag(int *i, char const *format);
 int     my_foward(char car);
 int     is_flag(char car);
@@ -63,13 +67,13 @@ int	my_power(int nb, int p);
 char	*my_evil_str(char *str);
 int	my_find_prime_sup(int nb);
 int	my_search(int nb);
-int	limite_sale(char *str, int i, int signe);
-int	my_signe(char *str);
+int	limite_sale(char const *str, int i, int signe);
+int	my_signe(char const *str);
 int	is_num(char a);
 int	my_is_prime(int nb);
 int	my_isneg(int n);
 void	display(int a, int b , int c);
-int	my_print_comb(void);
+void	my_print_comb(void);
 void	display_comb2(char a, char b, char c, char d);
 void	wyle_nor(char a, char b, char c, char d);
 int	my_print_comb2(void);
@@ -107,5 +111,6 @@ char	*my_strupcase(char *str);
 int	my_swap(int *a, int *b);
 int	my_printf_alpha(void);
 int	my_getnbr_base(char const *str, char const *base);
+char	*open_my_file(char *name);
 
 #endif /* _MY_H_ */

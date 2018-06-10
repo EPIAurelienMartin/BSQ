@@ -8,9 +8,25 @@
 #include "my.h"
 #include "bsq.h"
 
+void	my_check_buffer(char *s)
+{
+	int	i = 0;
+
+	while (s[i] != '\n')
+		i++;
+	while (s[i]) {
+		if (s[i] != '.' && s[i] != 'o' && s[i] != '\n' && s[i]) {
+			exit(84);
+		}
+		i++;
+	}
+}
+
 void    init_struct(struct s_bsq *bsq, char *buffer)
 {
-	bsq->tab = my_str_to_word_array(buffer, "\n");
+	bsq->tab = my_str_to_word_array(buffer);
+	if (my_str_isnum(bsq->tab[0]) == 0)
+		exit(84);
 	bsq->map_size = my_getnb(bsq->tab[0]) - 1;
 	bsq->large = my_strlen(bsq->tab[1]) - 1;
 	bsq->tab++;

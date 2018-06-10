@@ -15,7 +15,7 @@ int	is_num(char a)
 		return (1);
 }
 
-int	my_check(char *str)
+int	my_check(char const *str)
 {
 	int	i = 0;
 
@@ -25,7 +25,7 @@ int	my_check(char *str)
 	return (i);
 }
 
-int	my_signe(char *str)
+int	my_signe(char const *str)
 {
 	int	i = 0;
 	int	j = 0;
@@ -38,14 +38,14 @@ int	my_signe(char *str)
 	return (j);
 }
 
-int	limite_sale(char *str, int i, int signe)
+int	limite_sale(char const *str, int i, int signe)
 {
 	if (str[i] == 56 && signe % 2 == 1)
 		return (-2147483648);
 	return (0);
 }
 
-int	my_getnb(char *str)
+int	my_getnb(char const *str)
 {
 	int	res = 0;
 	int	i = 0;

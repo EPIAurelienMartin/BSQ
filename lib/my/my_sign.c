@@ -68,7 +68,7 @@ int     my_sign(int *i, va_list arg, int (**print)(), const char *format)
 	int     res = 0;
 	int     j = *i;
 
-	for (j = *i; format[j] == ' ' ;j += 1);
+	for (j = *i; format[j] == ' '; j += 1);
 	if (format[j] == '-')
 		res += my_sign_neg(i, arg, print, format);
 	if (format[j] == '+')
@@ -81,13 +81,13 @@ int     my_handle_sign(int *i, va_list arg, int (**print)(), const char *format)
 	int     res = 0;
 	int     j = *i;
 
-	for (j = *i; format[j] == ' ' ;j += 1);
+	for (j = *i; format[j] == ' '; j += 1);
 	if (format[j] == '-' || format[j] == '+')
 		res += my_sign(i, arg, print, format);
 	else if (my_char_isnum(format[j]) == 0) {
 		res += my_sign_nb(i, arg, print, format);
 	} else {
-		for (*i = *i; format[*i] == ' ' ; *i += 1)
+		for (*i = *i; format[*i] == ' '; *i += 1)
 			res += my_putchar(' ');
 		res += my_loop(i, arg, print, format);
 	}
